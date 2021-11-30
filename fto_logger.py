@@ -1,6 +1,6 @@
 import time 
 import datetime 
-
+import sys
 
 
 
@@ -57,13 +57,14 @@ def take_cmd(log_own,ses_num):
         cmd = str(input("FTO_LOGGER >> ::"))
         if cmd == "START" or cmd == 'start' or cmd == 's' or cmd =='S':
             main_log = get_obj(log_own,ses_num)
+            return main_log
         elif cmd == "END" or cmd == 'end' or cmd == 'e' or cmd == 'E':
-            break
+            sys.exit()
         elif cmd == "Help" or cmd == 'h':
             get_help()
         else:
             get_help()
-    return main_log
+    
     
 def act_num_ses(i,log_own):
     if i == 1:

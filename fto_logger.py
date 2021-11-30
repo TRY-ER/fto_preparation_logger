@@ -69,17 +69,17 @@ def act_num_ses(i,log_own):
     if i == 1:
         print(f'[+] THE CLEANING WITH WATER AND SOAP HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH WATER AND SOAP HAS STARTED AT :: {datetime.datetime.now()} \n'
-        #time.sleep(1500)
+        time.sleep(1500)
         print("[!!] FIVE MINUTE REMAINING TO CHANGE WATER TEMP .... ")
-        #time.sleep(180)
+        time.sleep(180)
         print("[!!] TWO MINUTE REMAINING TO CHANGE WATER TEMP ....")
         cm  = str(input('[!!!] TIME TO CHANGE THE WATER TEMP:: did you change ?? [y/n]::'))
         while True:
             if cm == 'y' or 'Y':
                 while True:
-                    #time.sleep(600)
+                    time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
-                    #time.sleep(300)
+                    time.sleep(300)
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 1 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 1 ENDED SUCCESS FULLY')
@@ -107,17 +107,17 @@ def act_num_ses(i,log_own):
     elif i == 2:
         print(f'[+] THE CLEANING WITH DISTILLED WATER HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH DISTILLED WATER HAS STARTED AT :: {datetime.datetime.now()} \n'
-        #time.sleep(1500)
+        time.sleep(1500)
         print("[!!] FIVE MINUTE REMAINING TO CHANGE WATER TEMP .... ")
-        #time.sleep(180)
+        time.sleep(180)
         print("[!!] TWO MINUTE REMAINING TO CHANGE WATER TEMP ....")
         cm  = str(input('[!!!] TIME TO CHANGE THE WATER TEMP:: did you change ?? [y/n]::'))
         while True:
             if cm == 'y' or 'Y':
                 while True:
-                    #time.sleep(600)
+                    time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
-                    #time.sleep(300)
+                    time.sleep(300)
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 2 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 2 ENDED SUCCESS FULLY')
@@ -144,17 +144,17 @@ def act_num_ses(i,log_own):
     elif i == 3:
         print(f'[+] THE CLEANING WITH ISOPROPANOL HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH ISOPROPANOL HAS STARTED AT :: {datetime.datetime.now()} \n'
-        #time.sleep(1500)
+        time.sleep(1500)
         print("[!!] FIVE MINUTE REMAINING TO CHANGE WATER TEMP .... ")
-        #time.sleep(180)
+        time.sleep(180)
         print("[!!] TWO MINUTE REMAINING TO CHANGE WATER TEMP ....")
         cm  = str(input('[!!!] TIME TO CHANGE THE WATER TEMP:: did you change ?? [y/n]::'))
         while True:
             if cm == 'y' or 'Y':
                 while True:
-                    #time.sleep(600)
+                    time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
-                    #time.sleep(300)
+                    time.sleep(300)
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 3 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 3 ENDED SUCCESS FULLY')
@@ -181,18 +181,18 @@ def act_num_ses(i,log_own):
     elif i == 4:
         print(f'[+] THE CLEANING WITH ACETON HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH ACETON HAS STARTED AT :: {datetime.datetime.now()} \n'
-        #time.sleep(1500)
-        #time.sleep(1500)
+        time.sleep(1500)
+        time.sleep(1500)
         print("[!!] FIVE MINUTE REMAINING TO CHANGE WATER TEMP .... ")
-        #time.sleep(180)
+        time.sleep(180)
         print("[!!] TWO MINUTE REMAINING TO CHANGE WATER TEMP ....")
         cm  = str(input('[!!!] TIME TO CHANGE THE WATER TEMP:: did you change ?? [y/n]::'))
         while True:
             if cm == 'y' or 'Y':
                 while True:
-                    #time.sleep(600)
+                    time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
-                    #time.sleep(300)
+                    time.sleep(300)
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 4 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 4 ENDED SUCCESS FULLY')

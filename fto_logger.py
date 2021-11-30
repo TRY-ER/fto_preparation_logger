@@ -56,12 +56,15 @@ def take_cmd(log_own,ses_num):
     while True:
         cmd = str(input("FTO_LOGGER >> ::"))
         if cmd == "START" or cmd == 'start' or cmd == 's' or cmd =='S':
+            fto_num = int(input("[==] ENTER NUMBER OF FTO SAMPLES TO BE CLEAN::>> "))
             main_log = get_obj(log_own,ses_num)
-            return main_log
+            return main_log,fto_num
         elif cmd == "END" or cmd == 'end' or cmd == 'e' or cmd == 'E':
             sys.exit()
         elif cmd == "Help" or cmd == 'h':
             get_help()
+        elif cmd == "man" or cmd == 'n':
+            show_manual()
         else:
             get_help()
     
@@ -81,6 +84,7 @@ def act_num_ses(i,log_own=""):
                     time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
                     time.sleep(300)
+                    print("[REM]  RINGE PROPERLY AND PREPARE DISTILLED WATER")
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 1 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 1 ENDED SUCCESS FULLY')
@@ -119,6 +123,7 @@ def act_num_ses(i,log_own=""):
                     time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
                     time.sleep(300)
+                    print("[REM]  RINGE PROPERLY AND PREPARE IPO")
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 2 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 2 ENDED SUCCESS FULLY')
@@ -156,6 +161,7 @@ def act_num_ses(i,log_own=""):
                     time.sleep(600)
                     print("[!!] FIVE MINUTE TO END THE SESSION .....")
                     time.sleep(300)
+                    print("[REM]  RINGE PROPERLY AND PREPARE ACETONE ")
                     cm_ = str(input('[!!!] TIME TO END THE SESSION 3 :: did you change ?? [y/n]::'))
                     if cm_ == 'y' or 'Y':
                         print('[+] SESSION 3 ENDED SUCCESS FULLY')
@@ -237,11 +243,30 @@ def write_log_own(log_own):
     except:
         print("[--] CANNOT SAVE log_ownS")
 
+def show_manual():
+    print("_________________  MANUAL  _________________________")
+    print("STEP_1: TAKE THE FTO AND REMOVE THE ATTATCHED TAPES ")
+    print("STEP_2: TAKE A BOWL AND PLACE FTOs (SHOULDNOT OVERLAP)")
+    print("STEP_3: POUR WATER WITH SOAP TO THE BOWL AND STIR FIRMLY")
+    print("STEP_4: FILL WATER IN THE HYDROSONIC MACHINE SUCH THAT WATER DONT OVER FLOW ")
+    print("STEP_5: PLACE THE BOWL INSIDE A LIGHT WEIGHT MATERIAL")
+    print("STEP_6: SET THE TIMER TO 45 MINUTE ")
+    print("STEP_7: SWITCH ON THE NORMAL WAVE BUTTON")
+    print("STEP_8: DONOT LET THE TEMP EXCEED 35 DC (CHECK AFTER 30 MINUTE)")
+    print("STEP_9: UNMOUNT THE BOWL AND CHANGE THE WATER IN HYDROSONIC MACHINE")
+    print("STEP_10: RINGE THE FTO PROPERLY FOR NEXT ROUND")
+    print("STEP_ONWARDS: REPEAT THE PROCESS WITH BELOW LIQUIDS RESPECTIVELY")
+    print("     DISTILLED WATER")
+    print("     ISOPROPANOL")
+    print("     ACETONE")
+    print("     ")
 if __name__  == "__main__":
     log_on = ''
     ses = get_ses_num()
-    print(ses)
-    main_log = take_cmd(log_own=log_on,ses_num=ses)
+    print(f"[++] SESSION NUMBER {ses}")
+    
+    main_log,fto_num = take_cmd(log_own=log_on,ses_num=ses)
+    main_log += f"   [++] NUMBER OF FTO CLEANED {fto_num}"
     main_log += "\n"
     main_log += f"OBSERVATION:{ses+1}"
     write_log_own(main_log)

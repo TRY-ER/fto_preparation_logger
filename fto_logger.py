@@ -15,7 +15,7 @@ def get_obj(log_own,ses_num):
         for i in range(1,5):
             print(f"    [+] SESSION {str(i)} HAS STARTED")
             log_own = log_own + f"   [+] SESSION {str(i)} HAS STARTED \n"
-            log_own = log_own + str(act_num_ses(i=i,log_own=log_own))  
+            log_own = log_own + str(act_num_ses(i=i))  
         print(f'    [+] OBSERVATION HAS ENDED... AT :{datetime.datetime.now()}')
         log_own = log_own + f"    [+] OBSERVATION HAS ENDED... AT :{datetime.datetime.now()}\n"
         print('[+] THIS IS OBSERVATION 1')
@@ -32,7 +32,7 @@ def get_obj(log_own,ses_num):
         for i in range(1,5):
             print(f"    [+] CLEANING SESSION {str(i)} HAS STARTED")
             log_own = log_own + f"   [+] CLEANING SESSION {str(i)} HAS STARTED \n"
-            log_own = log_own + str(act_num_ses(i=i,log_own=log_own))
+            log_own = log_own + str(act_num_ses(i=i))
         print(f'    [+] OBSERVATION HAS ENDED... AT :{datetime.datetime.now()}')
         log_own = log_own + f'    [+] OBSERVATION HAS ENDED... AT :{datetime.datetime.now()}'
         print(f'[+] THIS IS OBSERVATION {str(ses)}')
@@ -66,7 +66,7 @@ def take_cmd(log_own,ses_num):
             get_help()
     
     
-def act_num_ses(i,log_own):
+def act_num_ses(i,log_own=""):
     if i == 1:
         print(f'[+] THE CLEANING WITH WATER AND SOAP HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH WATER AND SOAP HAS STARTED AT :: {datetime.datetime.now()} \n'
@@ -104,7 +104,7 @@ def act_num_ses(i,log_own):
                     break
             else:
                 print("[--] ENTER A VALID REPLY WITH y or Y or n or N")
-                pass
+        return log_own
     elif i == 2:
         print(f'[+] THE CLEANING WITH DISTILLED WATER HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH DISTILLED WATER HAS STARTED AT :: {datetime.datetime.now()} \n'
@@ -141,7 +141,7 @@ def act_num_ses(i,log_own):
                     break
             else:
                 print("[--] ENTER A VALID REPLY WITH y or Y or n or N")
-                pass
+        return log_own
     elif i == 3:
         print(f'[+] THE CLEANING WITH ISOPROPANOL HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH ISOPROPANOL HAS STARTED AT :: {datetime.datetime.now()} \n'
@@ -178,7 +178,7 @@ def act_num_ses(i,log_own):
                     break
             else:
                 print("[--] ENTER A VALID REPLY WITH y or Y or n or N")
-                pass
+        return log_own
     elif i == 4:
         print(f'[+] THE CLEANING WITH ACETON HAS STARTED AT :: {datetime.datetime.now()}')
         log_own = log_own + f'   [+] THE CLEANING WITH ACETON HAS STARTED AT :: {datetime.datetime.now()} \n'
@@ -216,10 +216,10 @@ def act_num_ses(i,log_own):
                     break
             else:
                 print("[--] ENTER A VALID REPLY WITH y or Y or n or N")
-                pass
+        return log_own
     else:
         print("[!!!] SESSION GREATER THAN 4 HAS NOT BEEN CONSIDERED YET ...")
-    return log_own
+    
 
 def get_ses_num():
     last_line = obj_iter()
